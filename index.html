@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>윤도하 · 지도 그리는 사람</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="지도와 데이터 시각화를 만드는 디자이너 윤도하의 자기소개 페이지">
@@ -49,7 +54,9 @@
   }
 
   * { box-sizing: border-box; }
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   body {
+    margin: 0;
     background: var(--paper);
     color: var(--ink);
     font-family: var(--f-body);
@@ -168,6 +175,8 @@
     .contact dd { margin-bottom: 10px; }
   }
 </style>
+</head>
+<body>
 
 <header class="hero">
   <canvas id="topo" aria-hidden="true"></canvas>
@@ -337,3 +346,5 @@
   if (document.fonts) document.fonts.ready.then(draw);
 })();
 </script>
+</body>
+</html>
